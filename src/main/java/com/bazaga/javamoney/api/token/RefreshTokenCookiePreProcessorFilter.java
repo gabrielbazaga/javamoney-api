@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
-public class RefreshTokenCokiePreProcessorFilter implements Filter {
+public class RefreshTokenCookiePreProcessorFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
