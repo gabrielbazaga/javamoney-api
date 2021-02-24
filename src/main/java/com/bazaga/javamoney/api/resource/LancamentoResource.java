@@ -30,6 +30,7 @@ import com.bazaga.javamoney.api.exceptionhandler.JavamoneyExceptionHandler.Erro;
 import com.bazaga.javamoney.api.model.Lancamento;
 import com.bazaga.javamoney.api.repository.LancamentoRepository;
 import com.bazaga.javamoney.api.repository.filter.LancamentoFilter;
+import com.bazaga.javamoney.api.repository.projection.ResumoLancamento;
 import com.bazaga.javamoney.api.service.LancamentoService;
 import com.bazaga.javamoney.api.service.exception.PessoaInexistenOuInativaException;
 
@@ -54,6 +55,12 @@ public class LancamentoResource {
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")
 	public Page<Lancamento> pesquisar(LancamentoFilter lancamentoFilter, Pageable pageable){
 		return lancamentoRepository.filtrar(lancamentoFilter, pageable);
+	}
+	
+	@GetMapping(params = "resumo")
+	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_LANCAMENTO') and #oauth2.hasScope('read')")   //TODO Alterar "PESQUISAR" para "RESUMIR"
+	public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable){
+		return lancamentoRepository.resumir(lancamentoFilter, pageable);
 	}
 	
 	@GetMapping("/{codigo}")
