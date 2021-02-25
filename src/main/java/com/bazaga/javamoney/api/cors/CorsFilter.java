@@ -21,7 +21,7 @@ import com.bazaga.javamoney.api.config.property.JavamoneyApiProperty;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsFilter implements Filter {
 
-	//comentario teste
+
 	@Autowired
 	private JavamoneyApiProperty javamoneyApiProperty;
 	
