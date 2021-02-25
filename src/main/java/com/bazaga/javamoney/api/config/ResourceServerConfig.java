@@ -35,8 +35,5 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	public MethodSecurityExpressionHandler createExpressionHandler() {
 		return new OAuth2MethodSecurityExpressionHandler();
 	}
-	/*
-	private PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}*/
+
 }
