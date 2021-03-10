@@ -25,7 +25,7 @@
 
   <div class="p-grid">
     <div class="p-col-12">
-      <p-table [value]="lancamentos">
+      <p-table [value]="lancamentos" [paginator]="true" [rows]="2">
         <ng-template pTemplate="header">
             <tr>
                 <th class="col-pessoa-header">Pessoa</th>
