@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="p-grid">
+
+    <div class="p-col-12">
+      <h1>Nova Pessoa</h1>
+    </div>
+
+    <div class="p-col-12 p-fluid">
+      <label>Nome</label>
+      <input pInputText type="text" required ngModel #nome="ngModel" name="nome" minlength="15">
+
+      <div *ngIf="nome.hasError('required') && nome.dirty"  class="p-message p-message-error">
+        Informe o nome
+      </div>
+      <div *ngIf="nome.hasError('minlength')"  class="p-message p-message-error">
+        Mínimo de 15 caracteres.
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-9 p-fluid">
+      <label>Logradouro</label>
+      <input pInputText type="text" required ngModel #logradouro="ngModel" name="logradouro">
+
+      <div *ngIf="logradouro.hasError('required') && logradouro.dirty" class="p-message p-message-error">
+        Informe o logradouro
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-3 p-fluid">
+      <label>Número</label>
+      <input pInputText type="text" required ngModel #numero="ngModel" name="numero">
+      <div *ngIf="numero.hasError('required') && numero.dirty" class="p-message p-message-error">
+        Informe o número
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-4 p-fluid">
+      <label>Complemento</label>
+      <input pInputText type="text">
+    </div>
+
+    <div class="p-col-12 p-md-4 p-fluid">
+      <label>Bairro</label>
+      <input pInputText type="text" required ngModel #bairro="ngModel" name="bairro">
+
+      <div *ngIf="bairro.hasError('required') && bairro.dirty" class="p-message p-message-error">
+        Informe o bairro
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-4 p-fluid">
+      <label>CEP</label>
+      <p-inputMask mask="99999-999" maxlength=8 placeholder="99999-999" required ngModel #cep="ngModel" name="cep"></p-inputMask>
+
+      <div *ngIf="cep.hasError('required') && cep.dirty" class="p-message p-message-error">
+        Informe o CEP
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-fluid">
+      <label>Cidade</label>
+      <input pInputText type="text" required ngModel #cidade="ngModel" name="cidade">
+
+      <div *ngIf="cidade.hasError('required') && cidade.dirty" class="p-message p-message-error">
+        Informe a cidade
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-6 p-fluid">
+      <label>Estado</label>
+      <input pInputText type="text" required ngModel #estado="ngModel" name="estado">
+
+      <div *ngIf="estado.hasError('required') && estado.dirty" class="p-message p-message-error">
+        Informe o estado
+      </div>
+    </div>
+
+    <div class="p-col-12">
+      <button pButton type="submit" label="Salvar"></button>
+      <button pButton type="button" label="Novo" class="p-button-info"></button>
+      <a href="javascript:;">Voltar para pesquisa</a>
+    </div>
+  </div>
+</div>
