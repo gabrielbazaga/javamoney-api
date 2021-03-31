@@ -11,7 +11,7 @@
         <input pInputText type="text" name="nome"
           ngModel #nome="ngModel" required minlength="5">
 
-        <app-message [control]="nome" error="required"
+       <app-message [control]="nome" error="required"
           text="Informe o nome"></app-message>
         <app-message [control]="nome" error="minlength"
           text="Mínimo de {{ nome.errors?.minlength?.requiredLength }} caracteres"></app-message>
@@ -22,7 +22,7 @@
         <input pInputText type="text" name="logradouro"
           ngModel #logradouro="ngModel" required>
 
-       <app-message [control]="logradouro" error="required"
+      <app-message [control]="logradouro" error="required"
           text="Informe o logradouro"></app-message>
       </div>
 
@@ -31,7 +31,7 @@
         <input pInputText type="text" name="numero"
           ngModel #numero="ngModel" required>
 
-        <app-message [control]="numero" error="required"
+      <app-message [control]="numero" error="required"
           text="Informe o número"></app-message>
       </div>
 
@@ -45,7 +45,7 @@
         <input pInputText type="text" name="bairro"
           ngModel #bairro="ngModel" required>
 
-       <app-message [control]="bairro" error="required"
+      <app-message [control]="bairro" error="required"
           text="Informe o bairro"></app-message>
       </div>
 
@@ -63,7 +63,7 @@
         <input pInputText type="text" name="cidade"
           ngModel #cidade="ngModel" required>
 
-        <app-message [control]="cep" error="required"
+       <app-message [control]="cep" error="required"
           text="Informe a cidade"></app-message>
       </div>
 
@@ -72,7 +72,7 @@
         <input pInputText type="text" name="estado"
           ngModel #estado="ngModel" required>
 
-       <app-message [control]="estado" error="required"
+      <app-message [control]="estado" error="required"
           text="Informe o estado"></app-message>
       </div>
 
