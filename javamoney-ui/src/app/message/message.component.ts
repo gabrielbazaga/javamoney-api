@@ -4,23 +4,23 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-message',
   template: `
-    <div *ngIf="temErro()" class="ui-message ui-messages-error">
+    <div *ngIf="temErro()" class="p-message p-message-error">
       {{ text }}
     </div>
   `,
   styles: [`
-    .p-messages-error {
+    .p-message-error {
+      padding: 3px;
       margin: 0;
       margin-top: 4px;
-      padding: 3px;
     }
   `]
 })
-export class MessageComponent {
+export class MessageComponent{
 
-  @Input() error: string;
-  @Input() control: FormControl;
-  @Input() text: string;
+  @Input() error: string = '';
+  @Input() control: FormControl = new FormControl();
+  @Input() text: string = '';
 
   temErro(): boolean {
     return this.control.hasError(this.error) && this.control.dirty;

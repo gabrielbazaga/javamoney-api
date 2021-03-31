@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class PessoasPesquisaComponent {
 
   pessoas = [
-    { nome: 'Maria Tereza', cidade: 'Uberaba', estado: 'MG', ativo: true},
-    { nome: 'Romildo da Silva', cidade: 'Taguatinga', estado: 'DF', ativo: false},
-    { nome: 'Luiz Canamari', cidade: 'Sobradinho', estado: 'DF', ativo: true},
-    { nome: 'Gertudes Pinto', cidade: 'Porto Seguro', estado: 'BA', ativo: false}
+    { nome: 'Manoel Pinheiro', cidade: 'Uberlândia', estado: 'MG', ativo: true },
+    { nome: 'Sebastião da Silva', cidade: 'São Paulo', estado: 'SP', ativo: false },
+    { nome: 'Carla Souza', cidade: 'Florianópolis', estado: 'SC', ativo: true },
+    { nome: 'Luís Pereira', cidade: 'Curitiba', estado: 'PR', ativo: true },
+    { nome: 'Vilmar Andrade', cidade: 'Rio de Janeiro', estado: 'RJ', ativo: false },
+    { nome: 'Paula Maria', cidade: 'Uberlândia', estado: 'MG', ativo: true }
   ];
+
 }

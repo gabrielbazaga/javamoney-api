@@ -9,7 +9,7 @@ export class PessoaCadastroComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
