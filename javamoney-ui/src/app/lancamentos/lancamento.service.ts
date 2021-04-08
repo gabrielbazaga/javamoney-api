@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import * as moment from 'moment';
 
-export class LancamentoFiltro {
+export interface LancamentoFiltro {
   descricao: string;
   dataVencimentoInicio: Date;
   dataVencimentoFim: Date;
@@ -19,9 +19,10 @@ export class LancamentoService {
   pesquisar(filtro: LancamentoFiltro): Promise<any> {
 
     const headers = new HttpHeaders()
-      .append('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBqYXZhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNjE3ODQxOTI5LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiI3OGYwNmYxZS1kYWNlLTRhYzctYTZjYi1kNGFlYjE2NDFiZWMiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.OY4BroASmb4vCjHcnnRMdUd7APKSE0gQzg5w_R-Nbrw');
+      .append('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBqYXZhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNjE3ODQ1NDM3LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiJlY2MyMTNlZi0wOWJmLTQ0YjEtOTViZS1mZDI4YjdiNzZhYTciLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.6lhkQsEL_g6gBcphxHMyxPUvfqpbdRT-MLSUPHkSUVs');
 
       let params = new HttpParams();
+      //params = params.set('descricao', filtro.descricao);
 
       if (filtro.descricao) {
         params = params.set('descricao', filtro.descricao);
