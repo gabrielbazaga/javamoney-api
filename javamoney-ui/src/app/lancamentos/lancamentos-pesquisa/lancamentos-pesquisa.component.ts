@@ -25,8 +25,6 @@ export class LancamentosPesquisaComponent implements OnInit {
       dataVencimentoInicio: this.dataVencimentoInicio,
       dataVencimentoFim: this.dataVencimentoFim
     };
-
-    this.lancamentoService.pesquisar(filtro).then(lancamentos => this.lancamentos = lancamentos);
   }
 
 }
